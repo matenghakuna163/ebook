@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-09-01T14:43:09.056Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62" etag="imHyzUlt73wXGYNy4nLm" version="21.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-01T14:48:04.459Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62" etag="uNV8bOZJQduQ9VZoLixH" version="21.7.2" type="github">
   <diagram name="leveldb.db" id="Cs8dxaaui9C384qbi_I9">
     <mxGraphModel dx="1002" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="9mcqkagznCl06qRXI3zz-25" value="DB" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;glass=0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="60" y="110" width="560" height="286" as="geometry" />
+          <mxGeometry x="60" y="110" width="560" height="312" as="geometry" />
         </mxCell>
         <mxCell id="9mcqkagznCl06qRXI3zz-31" value="+static Open(const Option&amp;amp; option, const string&amp;amp; name, DB** db):Status" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="9mcqkagznCl06qRXI3zz-25">
           <mxGeometry y="26" width="560" height="26" as="geometry" />
@@ -34,8 +34,11 @@
         <mxCell id="9mcqkagznCl06qRXI3zz-40" value="+virtual GetProperty(const Slice&amp;amp; property, std::string&amp;amp; value)=0:bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="9mcqkagznCl06qRXI3zz-25">
           <mxGeometry y="234" width="560" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="9mcqkagznCl06qRXI3zz-41" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="9mcqkagznCl06qRXI3zz-25">
+        <mxCell id="9mcqkagznCl06qRXI3zz-41" value="+virtual GetApproximateSizes(const Range* range, int n, uint64_t* sizes)=0:void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="9mcqkagznCl06qRXI3zz-25">
           <mxGeometry y="260" width="560" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="9mcqkagznCl06qRXI3zz-42" value="+virtual CompactRange(const Slice* begin, const Slice* end)=0:void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;" vertex="1" parent="9mcqkagznCl06qRXI3zz-25">
+          <mxGeometry y="286" width="560" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
